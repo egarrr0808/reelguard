@@ -1,0 +1,157 @@
+{
+  "package": "com.instagram.android",
+  "version_name": "455.0.0.51.72",
+  "version_code": 386113969,
+  "inputs": [
+    {
+      "file": "base.apk",
+      "size": 268843569,
+      "sha256": "17424b55ce414ed41ceb59042791c5d4c198b2bf7a95dbb752eaef66c72302a7"
+    },
+    {
+      "file": "split_config.xxhdpi.apk",
+      "size": 7533078,
+      "sha256": "69773115cd620b1d4bfc47eaed0cec944723c754a687a4440f2b574a11d111ec"
+    },
+    {
+      "file": "split_executorch.apk",
+      "size": 1712422,
+      "sha256": "d7ac245c12d34067c1ab661c1d29228b73e4514bc69b9e5d46a5654d8542bcdf"
+    },
+    {
+      "file": "split_heliumcore.apk",
+      "size": 15656144,
+      "sha256": "4c7c8aeeb3e4e5642384e595c8acdeb97c7e97515b8616660a7af6af0987ecd9"
+    },
+    {
+      "file": "split_heliumiab.apk",
+      "size": 145805700,
+      "sha256": "65ff328dac97e0ee814b9a6c6f267d51bd2f49b64cc8ef68a26ccba3381a49d5"
+    },
+    {
+      "file": "split_horizon.apk",
+      "size": 422321,
+      "sha256": "ad72ba75e6850c7c00daa8bb04ef0d1a7e88b7751f8cb7057f20e27629a4dafa"
+    },
+    {
+      "file": "split_pytorch.apk",
+      "size": 16679,
+      "sha256": "9c202a7687c6974cc0395e2b857d6fae4608e5daa2dbdbb91aee4d6fafa0ffdf"
+    },
+    {
+      "file": "split_spm.apk",
+      "size": 90529,
+      "sha256": "b0044cb74c915c68671438c1553b173fb5e18ab58f061e8b73c9949e838c3305"
+    }
+  ],
+  "patches": [
+    {
+      "dex": "classes.dex",
+      "method": "LX/03am;->A01(Ljava/lang/String;)LX/03am;",
+      "offset": 6075114,
+      "before": "6201f73a",
+      "after": "12010000",
+      "original_method_sha256": "3b4a24cd43d580511b88848877d55fd8189be6b67673fe0984bb2e4be603f680",
+      "reason": "Exclude clips destination from configured native tab parsing"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sM;->A00(Lcom/instagram/common/session/UserSession;)LX/03am;",
+      "offset": 7254886,
+      "before": "62003c42",
+      "after": "62004042",
+      "original_method_sha256": "8f27f1af9a55cb83f71401e60c401b0017d93ea8c621a2df24ebee8ea7a61c62",
+      "reason": "Use Home instead of Reels as default destination"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sM;->A01()Ljava/util/List;",
+      "offset": 7254916,
+      "before": "62023c42",
+      "after": "62023e42",
+      "original_method_sha256": "3e097902a9b70b4b362c0386b1a76ae3bcc58c878c24ca7f6ea51efb6d5d88ae",
+      "reason": "Compact fallback native tabs without clips"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sM;->A01()Ljava/util/List;",
+      "offset": 7254920,
+      "before": "62033e42",
+      "after": "62034242",
+      "original_method_sha256": "3e097902a9b70b4b362c0386b1a76ae3bcc58c878c24ca7f6ea51efb6d5d88ae",
+      "reason": "Compact fallback native tabs without clips"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sM;->A01()Ljava/util/List;",
+      "offset": 7254924,
+      "before": "62044242",
+      "after": "62043d42",
+      "original_method_sha256": "3e097902a9b70b4b362c0386b1a76ae3bcc58c878c24ca7f6ea51efb6d5d88ae",
+      "reason": "Compact fallback native tabs without clips"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sM;->A01()Ljava/util/List;",
+      "offset": 7254928,
+      "before": "62053d42",
+      "after": "62054342",
+      "original_method_sha256": "3e097902a9b70b4b362c0386b1a76ae3bcc58c878c24ca7f6ea51efb6d5d88ae",
+      "reason": "Compact fallback native tabs without clips"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sM;->A01()Ljava/util/List;",
+      "offset": 7254936,
+      "before": "2507ab840000",
+      "after": "2506ab840000",
+      "original_method_sha256": "3e097902a9b70b4b362c0386b1a76ae3bcc58c878c24ca7f6ea51efb6d5d88ae",
+      "reason": "Fallback native tab list contains six remaining destinations"
+    },
+    {
+      "dex": "classes2.dex",
+      "method": "LX/04sT;->A0B(LX/03am;LX/03am;ZZ)V",
+      "offset": 7259068,
+      "before": "121071202d230a00",
+      "after": "62003c42320a8400",
+      "original_method_sha256": "4f588342c155095c95d6c98db0bd61810499c95a4ab46bfd3f1645e166bc6d98",
+      "reason": "Reject dedicated Reels tab fragment pushes before navigation; replaces target non-null assertion"
+    },
+    {
+      "dex": "classes5.dex",
+      "method": "LX/06Sp;->A01(LX/06Sp;)V",
+      "offset": 5692604,
+      "before": "1210",
+      "after": "1200",
+      "original_method_sha256": "4eb9c1e30d4e9bab1244d22a9bca2c95d19f03edab7f24071f8625f70e95c5c8",
+      "reason": "Force native Reels touch paging disabled"
+    },
+    {
+      "dex": "classes5.dex",
+      "method": "LX/06Sp;->BEh()V",
+      "offset": 5695198,
+      "before": "1210",
+      "after": "1200",
+      "original_method_sha256": "9cedf698973f1fc347363c42e6c6a46f1e6226529b06fbb33c0034385a6abf10",
+      "reason": "Force native Reels touch paging disabled"
+    },
+    {
+      "dex": "classes5.dex",
+      "method": "LX/06Sp;->H99(Z)V",
+      "offset": 5696600,
+      "before": "1a00f0cd",
+      "after": "0e000000",
+      "original_method_sha256": "b4f447608d020e37fcb7d0e9ab4f235bc9d9f6df499063f57edc400794a6cbc3",
+      "reason": "Disable explicit Reels next/previous commands without changing initial item positioning"
+    },
+    {
+      "dex": "classes5.dex",
+      "method": "LX/06Sp;->H9E()V",
+      "offset": 5696688,
+      "before": "1211",
+      "after": "0e00",
+      "original_method_sha256": "8c9457bfe7103bf1e089554785a04c8a97ede70d8c9cc912d8242251c725f52b",
+      "reason": "Disable explicit Reels next/previous commands without changing initial item positioning"
+    }
+  ]
+}
